@@ -49,7 +49,7 @@ class Particle
 
     setColor (color)
     {
-        this.element.style.backgroundColor = color;
+        this.element.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
     }
 
     update()
