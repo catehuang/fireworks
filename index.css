@@ -1,0 +1,20 @@
+body 
+{
+    background-color: black;
+    height: 100vh;
+}
+
+@keyframes colorchange {
+    from{border-color: white;}
+    to {border-color: orange}
+}
+
+.firework
+{
+    position: fixed;
+    display: inline-block;
+    border: 2px solid black;
+    animation-name: colorchange;
+    animation-duration: 8s;
+}
+
