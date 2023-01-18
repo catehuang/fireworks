@@ -60,10 +60,23 @@ class Firework
      */
     explode()
     {
+        const colors = [
+            'chocolate',
+            'darkred',
+            'darksalmon',
+            'darkviolet',
+            'darkblue',
+            'yellow',
+            'gold',
+            'green',
+            'moccasin'
+        ]
+        const color = colors[parseInt(Math.random() * colors.length)];
         for (let i = 0; i < 50; i++)
         {
             const particle = new Particle();
             particle.setPosition(this.x, this.y);
+            particle.setColor(color);
             particles.push(particle);            
         }
     }
