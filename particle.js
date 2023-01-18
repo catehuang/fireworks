@@ -20,12 +20,6 @@ class Particle
         this.vx = Math.cos(this.angle) * this.speed;
         this.vy = -Math.sin(this.angle) * this.speed;
 
-        // const colors = [
-        //     'red',
-        //     'blue',
-        //     'yellow',
-        //     'green'
-        // ]
         /*
          *  Create element to show particles
          */
@@ -33,8 +27,7 @@ class Particle
         this.element.className = "particle";
         this.element.style.left = this.x + 'px';
         this.element.style.top = this.y + 'px';
-        this.element.style.backgroundColor = "orange";
-        // this.element.style.backgroundColor = colors[parseInt(Math.random() * colors.length)];
+        // this.element.style.backgroundColor = "orange";
         document.body.appendChild(this.element);
 
         /**
@@ -52,6 +45,11 @@ class Particle
         this.y = y;
         this.element.style.left = this.x + 'px';
         this.element.style.top = this.y + 'px';
+    }
+
+    setColor (color)
+    {
+        this.element.style.backgroundColor = color;
     }
 
     update()
