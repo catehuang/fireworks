@@ -40,7 +40,8 @@ class Firework
             this.element.remove();
             fireworks.splice(fireworks.indexOf(this), 1);
             this.explode();
-        }, 3600);
+            // this.second_explode();
+        }, 4200);
     }
 
     /**

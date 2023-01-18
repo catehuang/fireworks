@@ -2,7 +2,7 @@ const fireworks = [];
 const particles = [];
 
 /*
- * Create fireworks at a time, need to take computer performance into account
+ * Create fireworks at a time, need to take the computer performance into account
  */
 setInterval(() => {
     for (let i = 0; i < 10; i++)
