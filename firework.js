@@ -7,9 +7,10 @@ class Firework
     {
         /*
          * Location:
+         * where to shoot fireworks
         */
-    //    this.x = window.innerWidth / 4 + window.innerWidth * Math.random() * 0.5;
-        this.x = window.innerWidth / 2;
+        //this.x = window.innerWidth / 2;
+        this.x = window.innerWidth * (0.4 + Math.random() * 0.2);
         this.y = window.innerHeight * 4 / 5;
 
         /*
@@ -41,7 +42,7 @@ class Firework
             fireworks.splice(fireworks.indexOf(this), 1);
             this.explode();
             // this.second_explode();
-        }, 4200);
+        }, 3400);
     }
 
     /**
@@ -68,12 +69,12 @@ class Firework
             color.push(color_rgb);
         }
 
-        for (let i = 0; i < 50; i++)
+        for (let i = 0; i < 40; i++)
         {
             const particle = new Particle();
             particle.setPosition(this.x, this.y);
             particle.setColor(color);
-            particles.push(particle);            
+            particles.push(particle); 
         }
     }
 }
